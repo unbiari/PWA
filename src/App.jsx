@@ -129,14 +129,12 @@ function App() {
           <button onClick={() => setPage('googleSSO')}>Google SSO 로그인</button>
         </>
       )}
-      <div style={{ position: 'fixed', bottom: 140, left: 0, right: 0, textAlign: 'center', zIndex: 9999 }}>
-        <button onClick={handleSyncRegister} style={{ padding: '10px 20px', fontSize: '15px', borderRadius: '8px', background: '#ffe600', color: '#222', border: 'none', cursor: 'pointer', marginBottom: '8px' }}>
-          백그라운드 동기화 요청
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'fixed', bottom: 80, left: 0, right: 0, zIndex: 9999, gap: '24px' }}>
+        <button onClick={handleSyncRegister} style={{ padding: '10px 20px', fontSize: '15px', borderRadius: '8px', background: '#ffe600', color: '#222', border: 'none', cursor: 'pointer' }}>
+          백그라운드 동기화
         </button>
-        {syncStatus && <div style={{ color: '#222', fontSize: '14px' }}>{syncStatus}</div>}
-      </div>
-      <div style={{ position: 'fixed', bottom: 80, left: 0, right: 0, textAlign: 'center', zIndex: 9999 }}>
-        <button onClick={handlePushSubscribe} style={{ padding: '10px 20px', fontSize: '15px', borderRadius: '8px', background: '#ffe600', color: '#222', border: 'none', cursor: 'pointer', marginBottom: '8px' }}>
+        {syncStatus && <div style={{ color: '#222', fontSize: '14px', marginRight: '16px' }}>{syncStatus}</div>}
+        <button onClick={handlePushSubscribe} style={{ padding: '10px 20px', fontSize: '15px', borderRadius: '8px', background: '#ffe600', color: '#222', border: 'none', cursor: 'pointer' }}>
           푸시 알림 구독하기
         </button>
         {pushStatus && <div style={{ color: '#222', fontSize: '14px' }}>{pushStatus}</div>}
