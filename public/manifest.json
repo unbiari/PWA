@@ -2,7 +2,7 @@
   "name": "PWA Demo",
   "short_name": "PWADemo",
   "description": "PWA 데모 애플리케이션입니다.",
-  "start_url": ".",
+  "start_url": "/PWA/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#317EFB",
